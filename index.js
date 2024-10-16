@@ -5,6 +5,11 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.get("/",(req,res)=>{
+  res.send({
+    message : "working",
+  })
+})
 app.use("/api/v1/mint", mintRouter);
 app.use("/api/v1/image", imageRouter);
 
