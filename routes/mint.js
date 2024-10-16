@@ -5,11 +5,7 @@ import axios from "axios";
 const mintRouter = Router();
 dotenv.config();
 
-mintRouter.get("/", (req, res) => {
-  res.send({
-    message: "Hello",
-  });
-});
+
 mintRouter.post("/NFT", async (req, res) => {
   try {
     const env = process.env.ENV;
