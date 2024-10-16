@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/v1/mint/NFT",
+        "methods": ["POST"],
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/v1/image/geturl",
+        "methods": ["POST"],
+        "dest": "/index.js"
+      }
+    ],
+    "env": {
+      "CLOUD_NAME": "@cloud_name",
+      "API_KEY_IMG": "@api_key_img",
+      "API_SECRET": "@api_secret",
+      "API_KEY_MINT": "@api_key_mint",
+      "CHAIN": "@chain",
+      "ENV": "@env"
+    }
+  }
+  
