@@ -17,14 +17,6 @@
         "methods": ["POST"],
         "dest": "/index.js"
       }
-    ],
-    "env": {
-      "CLOUD_NAME": "@cloud_name",
-      "API_KEY_IMG": "@api_key_img",
-      "API_SECRET": "@api_secret",
-      "API_KEY_MINT": "@api_key_mint",
-      "CHAIN": "@chain",
-      "ENV": "@env"
-    }
+    ]
   }
   
