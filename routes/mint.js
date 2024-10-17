@@ -1,10 +1,10 @@
 import { Router } from "express";
 import dotenv from "dotenv";
 import axios from "axios";
-
+import cors from "cors"
 const mintRouter = Router();
 dotenv.config();
-
+mintRouter.use(cors());
 
 mintRouter.post("/NFT", async (req, res) => {
   try {

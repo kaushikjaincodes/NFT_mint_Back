@@ -2,10 +2,11 @@ import { Router } from "express";
 import { v2 as cloudinary } from 'cloudinary';
 import bodyParser from "body-parser";
 import dotenv from "dotenv"
+import cors from "cors"
 const imageRouter = Router();
 dotenv.config();
 imageRouter.use(bodyParser.json({ limit: '50mb' }));
-
+imageRouter.use(cors());
 imageRouter.post("/geturl",async (req,res)=>{
     cloudinary.config({
         cloud_name: process.env.CLOUD_NAME,
